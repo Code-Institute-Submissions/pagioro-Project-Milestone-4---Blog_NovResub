@@ -2,6 +2,105 @@
 
 {% block content %}
 
+<section id="middle-section">
+    <div class="row colsm8-div">
+        {% for Recipe in recipe_list %}
+        <div class="col-sm-8">
+            <img class="food1" src="assets/images/pexels-ella-olsson-1640777.jpg" alt="">
+            <h5 class="text-center title">Feijoada</h5>
+            <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae corporis, 
+                hic omnis debitis quisquam eius facilis dolores, quas sapiente quod temporibus 
+                nihil ex quis id odit rerum non facere dolor.</p>					
+            <a href="#" class="btn btn-food1 btn-secondary">CONTINUE READING</a>
 
+            <hr class="hr-middle">
+
+            
+            <div class="image-position">
+                <img class="food2" src="assets/images/pexels-ash-376464.jpg" alt="">
+            </div>
+            <div class="content-position2">
+                <h5 class="title">Chocolate</h5>
+                <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae corporis, 
+                    hic omnis debitis quisquam eius facilis dolores, quas sapiente quod temporibus 
+                    nihil ex quis id odit rerum non facere dolor.</p>
+                <a href="#" class="btn btn-food1 btn-secondary">CONTINUE READING</a>
+            </div>				
+
+                <hr class="hr-middle">
+
+            <div class="">
+                <img class="food3" src="assets/images/pexels-pixabay-461198.jpg" alt="">
+            </div>
+                <h5 class="title">Chocolate</h5>
+                <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae corporis, 
+                    hic omnis debitis quisquam eius facilis dolores, quas sapiente quod temporibus 
+                    nihil ex quis id odit rerum non facere dolor.</p>
+                <a href="#" class="btn btn-food1 btn-secondary">CONTINUE READING</a>			
+
+                <hr class="hr-middle">
+            
+            <div class="">
+                <img class="food4" src="assets/images/pexels-pixabay-461198.jpg" alt="">
+            </div>
+            <div>
+                <h5 class="title">Chocolate</h5>
+                <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae corporis, 
+                    hic omnis debitis quisquam eius facilis dolores, quas sapiente quod temporibus 
+                    nihil ex quis id odit rerum non facere dolor.</p>
+                <a href="#" class="btn btn-food1 btn-secondary">CONTINUE READING</a>
+            </div>							
+        </div>
+        {% endfor %}
+        									
+        <div class="col-sm-4">
+            <div class="about-me">
+                <h6 class="text-center aboutme-main">ABOUT ME</h6>
+                <img class="aboutme-image" src="assets/images/about me.jpg" alt="about me">
+                <h6 class="text-center about-name">Lorem</h6>
+                <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam praesentium tempore dolor alias animi, minima assumenda.</p>
+                <div class="social-list-about">			
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="instagram">
+                <h6 class="text-center instagram-main">INSTAGRAM</h6>
+                <img class="aboutme-image" src="assets/images/about me.jpg" alt="about me">
+                <h6 class="text-center about-name">Lorem</h6>
+                <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam praesentium tempore dolor alias animi, minima assumenda.</p>
+                <div class="social-list-about">			
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>		
+            <div class="newsletter">
+                <div class="">
+                    <h5>Subscribe to receive new recipes straight to your inbox!</h5>
+                </div>
+                <div class="">
+                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Your email address">
+                    <a href="#" class="btn btn-subscribe-news btn-secondary">Subscribe</a>	
+                </div>					
+            </div>	
+            <div class="about-me">
+                <h6 class="text-center aboutme-main">ABOUT ME</h6>
+                <img class="aboutme-image" src="assets/images/about me.jpg" alt="about me">
+                <h6 class="text-center about-name">Lorem</h6>
+                <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam praesentium tempore dolor alias animi, minima assumenda.</p>
+                <div class="social-list-about">			
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>				
+        </div>			
+    </div>
+</section>
 
 {%endblock%}
