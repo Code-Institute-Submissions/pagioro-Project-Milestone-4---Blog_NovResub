@@ -23,7 +23,7 @@ class Recipe(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)   
     updated_date = models.DateTimeField(auto_now=True)
     image = CloudinaryField('image', default='placeholder')
-    prep_time = models.CharField(max_length=20, unique=False)
+    prep_time = models.CharField(max_length=20)
     cook_time = models.CharField(max_length=20, unique=False)
     serves = models.CharField(max_length=20, unique=False)
     calories = models.IntegerField(default=1)
