@@ -23,9 +23,9 @@ class Recipe(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)   
     updated_date = models.DateTimeField(auto_now=True)
     image = CloudinaryField('image', default='placeholder')
-    prep_time = models.CharField(max_length=20, unique=True)
-    cook_time = models.CharField(max_length=20, unique=True)
-    serves = models.CharField(max_length=20, unique=True)
+    prep_time = models.CharField(max_length=20, unique=False)
+    cook_time = models.CharField(max_length=20, unique=False)
+    serves = models.CharField(max_length=20, unique=False)
     calories = models.IntegerField(default=1)
     ingredients = models.TextField()
     # SummernoteTextField() do exemplo
