@@ -2,11 +2,13 @@
 
 {% block content %}
 
+
 <!--- First Section -->
 <div class="container">
-    {% for Recipe in Recipe_list %}
+    {% for recipe in recipe_list %}
+    
     <div class="row">
-    {% if forloop.counter|divisibleby:2 %}      
+         
     <div class="col col-recipe">         
         <div class="food-align">
             {% if "placeholder" in recipe.featured_image.url %}
@@ -15,16 +17,15 @@
             <img class="food-image" src="{{ recipe.feature_image.url }}" alt="">
             {% endif %}  
         <div>
-            <p>Author: {{ Recipe.id_user }}</p>
+            <p>Author: {{ recipe.id_user }}</p>
         </div>          
         </div>
-            <h5 class="text-center title">{{ Recipe.title }}</h5>
-            <p class="text-center">{{ Recipe.excerpt }}</p>
-            <p>{{ Recipe.created_date }}<i class="far fa-heart"></i>{{ Recipe.likes }}</p>            
+            <h5 class="text-center title">{{ recipe.title }}</h5>
+            <p class="text-center">{{ recipe.excerpt }}</p>
+            <p>{{ recipe.created_date }}<i class="far fa-heart"></i>{{ recipe.likes }}</p>            
             <div class="btn-align">
                 <a href="#" class="btn">CONTINUE READING</a>
-            </div>	
-    {% endif %}
+            </div>
     </div>    
     {% endfor %}
     {% if is_paginated %}
