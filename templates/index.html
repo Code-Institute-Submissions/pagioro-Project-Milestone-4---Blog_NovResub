@@ -9,20 +9,21 @@
     
     <div class="row">
          
-    <div class="col col-recipe">         
+    <div class="col-6 col-recipe">         
         <div class="food-align">
             {% if "placeholder" in recipe.featured_image.url %}
-            <img class="food-image" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="">
+            <img class="food-image" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="">            
             {% else %}
-            <img class="food-image" src="{{ recipe.feature_image.url }}" alt="">
-            {% endif %}  
-        <div>
-            <p>Author: {{ recipe.id_user }}</p>
-        </div>          
+            <img class="food-image" src="{{ recipe.featured_image.url }}" alt="">             
+            {% endif %}
+            <div>
+                <p>Author: {{ recipe.id_user }}</p>
+            </div>                             
         </div>
             <h5 class="text-center title">{{ recipe.title }}</h5>
             <p class="text-center">{{ recipe.excerpt }}</p>
-            <p>{{ recipe.created_date }}<i class="far fa-heart"></i>{{ recipe.likes }}</p>            
+            <p>{{ recipe.created_date }}<i class="far fa-heart"></i>{{ recipe.likes }}</p>
+                         
             <div class="btn-align">
                 <a href="#" class="btn">CONTINUE READING</a>
             </div>
