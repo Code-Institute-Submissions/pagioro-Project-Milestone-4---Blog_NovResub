@@ -112,6 +112,10 @@ hr {
   margin: 1.25rem 0 1.25rem;
 }
 
+i {
+  margin-left: 0.625rem;
+}
+
 .btn {
   margin-top: 1.25rem;
   border-radius: 0;
