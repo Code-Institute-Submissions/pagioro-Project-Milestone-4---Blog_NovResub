@@ -13,12 +13,12 @@
             {% if "placeholder" in recipe.image.url %}
             <img class="food-image" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="">            
             {% else %}
-            <img class="food-image" src="{{ recipe.image.url }}" alt="">             
-            {% endif %}
-            <div>
-                <p>Author: {{ recipe.id_user }}</p>
-            </div> 
+            <img class="food-image" src="{{ recipe.image.url }}" alt="">                         
+            {% endif %}            
         </div>
+        <div>
+            <p>Author: {{ recipe.id_user }}</p>
+        </div> 
             <h5 class="text-center title">{{ recipe.title }}</h5>
             <p class="text-center">{{ recipe.excerpt }}</p>
             <p class="text-center">{{ recipe.created_date }}<i class="far fa-heart"></i>{{ recipe.likes }}</p>
