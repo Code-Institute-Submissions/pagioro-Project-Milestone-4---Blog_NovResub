@@ -105,7 +105,7 @@ hr {
 }
 
 .food-image {
-  width: 70%;  
+  width: 100%;  
 }
 
 .title {
@@ -114,6 +114,7 @@ hr {
 
 i {
   margin-left: 0.625rem;
+  margin-right: 0.625rem;
 }
 
 .btn {
