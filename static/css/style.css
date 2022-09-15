@@ -81,12 +81,18 @@ hr {
 /* --- Middle Section Index.html --- */
 
 .container {  
-  margin-top: 2.5rem;
+  margin-top: 0.625rem;  
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+
 }
 
 .col-recipe {
   border: 1px solid rgba(0,0,0,.1);  
-  margin: 0.625rem;
+  margin: 1.25rem;
 }
 
 .hr-middle {
@@ -139,17 +145,21 @@ i {
   margin-bottom: 1.25rem;
 }
 
-.btn {
+.btn,
+.page-link  {
   background-color: white;
   color: black;
   border: 1px solid #555555;
 }
 
-.btn:hover {
+.btn:hover,
+.page-link:hover  {
   background-color: #95b5ac;
   color: white;
   border: 1px solid #95b5ac;  
 }
+
+
 
 /* --- Middle Section about.html --- */
 
