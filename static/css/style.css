@@ -105,7 +105,12 @@ hr {
 }
 
 .food-image {
-  width: 100%;  
+  width: 100%;
+}
+
+.author {
+  margin-top: 0.625rem;
+  text-align: center;
 }
 
 .title {
