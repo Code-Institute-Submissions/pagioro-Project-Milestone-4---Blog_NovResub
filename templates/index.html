@@ -21,7 +21,7 @@
             <p class="text-center">{{ recipe.excerpt }}</p>
             <p class="text-center">{{ recipe.created_date }}<i class="fa-regular fa-thumbs-up"></i>{{ recipe.number_of_likes }}</p>
         <div class="btn-align">
-            <a href="#" class="btn">CONTINUE READING</a>
+            <a href= "{% url 'post_detail' recipe.slug %}" class="btn">CONTINUE READING</a>
         </div>
     </div>    
     {% endfor %}  
