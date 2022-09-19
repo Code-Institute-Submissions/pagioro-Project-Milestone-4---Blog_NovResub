@@ -66,7 +66,7 @@ class Comment(models.Model):
     """
     Model for comment
     """
-
+    
     id_comment = models.IntegerField(unique=True)
     id_recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="comments")
     # related_name ?
