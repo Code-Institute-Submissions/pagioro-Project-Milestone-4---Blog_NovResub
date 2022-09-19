@@ -21,10 +21,10 @@
 	<section id="header-top">
 		<div class="signup-login">		
       {% if user.is_authenticated %}
-			  <a href="#" class="logout">Logout</a>	
+			  <a href="{% url 'account_logout' %}" class="logout">Logout</a>	
       {% else %}	
-        <a href="#" class="signup">Sign Up</a>	      
-        <a href="#" class="login">Login</a>	
+        <a href="{% url 'account_signup' %}" class="signup">Sign Up</a>	      
+        <a href="{% url 'account_login' %}" class="login">Login</a>	
       {% endif %}
 		</div>		
 		<div class="social-list">			
