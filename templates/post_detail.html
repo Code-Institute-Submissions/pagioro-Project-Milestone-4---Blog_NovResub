@@ -7,13 +7,13 @@
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
                 <!-- Post title goes in these h1 tags -->
-                <h1 class="post-title">{{ Recipe.title }}</h1>
+                <h1 class="post-title">{{ recipe.title }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle">{{ Recipe.id_user }} | {{ Recipe.created_date }}</p>
+                <p class="post-subtitle">{{ recipe.id_user }} | {{ recipe.created_date }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
-                {% if "placeholder" in Recipe.image.url %}
+                {% if "placeholder" in recipe.image.url %}
                 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
                 {% else %}
                 <img src=" {{ recipe.image.url }}" width="100%">
@@ -30,13 +30,13 @@
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text ">
-                    {{ Recipe.description | safe }}
+                    {{ recipe.description | safe }}
                 </p>
                 <div class="row">
 
                     <div class="col-1">
                         <!-- The number of likes goes before the closing strong tag -->
-                        <strong class="text-secondary"><i class="far fa-heart"></i> {{ Recipe.number_of_likes }} </strong>
+                        <strong class="text-secondary"><i class="far fa-heart"></i> {{ recipe.number_of_likes }} </strong>
                     </div>
                     <div class="col-1">
                         {% with Comment.count as total_comments %}

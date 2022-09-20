@@ -14,7 +14,7 @@ class Recipe(models.Model):
     Model for recipe
     """
 
-    id_recipe = models.IntegerField(unique=True)
+    id_recipe = models.AutoField(primary_key=True)  
     title = models.CharField(max_length=200, unique=True)
     id_user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='recipes')
     # related_name='blog_posts'
