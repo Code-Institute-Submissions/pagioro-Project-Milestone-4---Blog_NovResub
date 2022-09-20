@@ -37,6 +37,7 @@ class Recipe(models.Model):
     likes = models.ManyToManyField(User, related_name='recipe_likes', blank=True)
     # do professor related_name='blog_likes'
 
+
     class Meta:
         """
         Order the recipes in descending order
@@ -66,8 +67,8 @@ class Comment(models.Model):
     """
     Model for comment
     """
-    
-    id_comment = models.IntegerField(unique=True)
+    id_comment = models.AutoField(primary_key=True)    
+    # id_comment = models.IntegerField(unique=True)
     id_recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="comments")
     # related_name ?
     # id_user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='author_comments')

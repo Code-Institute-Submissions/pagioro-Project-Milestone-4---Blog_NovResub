@@ -13,7 +13,8 @@ class RecipeList(generic.ListView):
 class PostDetail(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = Recipe.objects.filter(status_recipe=1)
-        post = get_object_or_404(queryset, slug=slug)        
+        # recipe = get_object_or_404(Recipe, slug=slug)  
+        post = get_object_or_404(queryset, slug=slug)         
         comments = post.comments.filter(approved=True).order_by('-created_date') #voltar se estiver errado
         liked = False
         if post.likes.filter(id=self.request.user.id).exists(): #erro 
@@ -35,7 +36,8 @@ class PostDetail(View):
 
     def post(self, request, slug, *args, **kwargs):
         queryset = Recipe.objects.filter(status_recipe=1)
-        post = get_object_or_404(queryset, slug=slug)        
+        recipe = get_object_or_404(Recipe, slug=slug)  
+        post = get_object_or_404(queryset, slug=slug)               
         comments = post.comments.filter(approved=True).order_by('-created_date') #voltar se estiver errado
         liked = False
         if post.likes.filter(id=self.request.user.id).exists(): #erro 
@@ -46,10 +48,9 @@ class PostDetail(View):
 
         if comment_form.is_valid():
             comment_form.instance.email = request.user.email
-            comment_form.instance.name = request.user.username
-            comment_form.instance.id_recipe = request.user.id
+            comment_form.instance.name = request.user.username  
             comment = comment_form.save(commit=False)
-            comment.post = post
+            comment.id_recipe = recipe
             comment.save()      
         else:        
             comment_form = CommentForm()
