@@ -6,17 +6,19 @@
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
-                <!-- Post title goes in these h1 tags -->
-                <h1 class="post-title">{{ recipe.title }}</h1>
-                <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle">{{ recipe.id_user }} | {{ recipe.created_date }}</p>
+                <div>
+                    <!-- Post title goes in these h1 tags -->
+                    <h1 class="post-title">{{ post.title }}</h1>
+                    <!-- Post author goes before the | the post's created date goes after -->
+                    <p class="post-subtitle">{{ post.id_user }} | {{ post.created_date }}</p>
+                </div>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
-                {% if "placeholder" in recipe.image.url %}
+                {% if "placeholder" in post.image.url %}
                 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
                 {% else %}
-                <img src=" {{ recipe.image.url }}" width="100%">
+                <img src=" {{ recipe.image.url }}" alt="">
                 {% endif %}
             </div>
         </div>
@@ -25,18 +27,42 @@
 
 <div class="container">
     <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
+        <div class="col">
             <div class="card-body">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text ">
-                    {{ recipe.description | safe }}
-                </p>
                 <div class="row">
+                    <div class="col-6 group">
+                        <div>
+                            <p><i class="fa-regular fa-clock"></i><span class="span_bold">Prep time:</span> {{ post.prep_time }}</p>
+                            <p><i class="fa-regular fa-clock"></i><span class="span_bold">Cook time:</span> {{ post.cook_time }}</p>
+                            <p><i class="fa-solid fa-people-group"></i><span class="span_bold">Serves:</span> {{ post.serves }} people</p>
+                            <p><i class="fa-solid fa-fire-flame-curved"></i><span class="span_bold">Calories:</span> {{ post.calories }}</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <img class="food-image" src="{{ post.image.url }}" alt=""> 
+                    </div>
+                </div>
+                <div>
+                    <h4>Description:</h4>
+                    <p class="card-text ">                        
+                        {{ post.description | safe }}
+                    </p>
+                </div>
+                <div>
+                    <h4>Ingredients:</h4>
+                    <p>{{ post.ingredients | safe }}</p>
+                </div>
+                <div>
+                    <h4>Method:</h4>
+                    <p>{{ post.method | safe }}</p>
+                </div>
 
+                <div class="row">
                     <div class="col-1">
                         <!-- The number of likes goes before the closing strong tag -->
-                        <strong class="text-secondary"><i class="far fa-heart"></i> {{ recipe.number_of_likes }} </strong>
+                        <strong class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }} </strong>
                     </div>
                     <div class="col-1">
                         {% with Comment.count as total_comments %}
@@ -55,7 +81,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-8 card mb-4  mt-3 ">
+        <div class="col-md-8">
             <h3>Comments:</h3>
             <div class="card-body">
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
@@ -76,7 +102,7 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="col-md-4 card mb-4  mt-3 ">
+        <div class="col-md-4">
             <div class="card-body">
                 {% if commented %}
                 <div class="alert alert-success" role="alert">
