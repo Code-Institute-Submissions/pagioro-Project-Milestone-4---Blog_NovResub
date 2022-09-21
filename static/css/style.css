@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 
 body {  
   background-color: #F9F9F9;
   width: 100%;
-  font-family: lora, Helvetica, sans-serif;
+  font-family: Comfortaa, Helvetica, sans-serif;
 }
 
 #main-section {

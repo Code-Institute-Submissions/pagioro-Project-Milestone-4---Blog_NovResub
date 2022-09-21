@@ -9,9 +9,9 @@
     <div class="col-lg-3 col-recipe"> 
         <div class="food-align">
             {% if "placeholder" in recipe.image.url %}
-                <img class="food-image" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="">
+                <img class="food-image" src="https://res.cloudinary.com/epari/image/upload/v1663764105/pexels-nyara-aquino-5643426_f8z7t4.jpg" alt="no correct image">
             {% else %}
-                <img class="food-image" src="{{ recipe.image.url }}" alt="">                         
+                <img class="food-image" src="{{ recipe.image.url }}" alt="food image">                         
             {% endif %}            
         </div>
         <div>
