@@ -16,9 +16,9 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+                <img src="https://res.cloudinary.com/epari/image/upload/v1663764105/pexels-nyara-aquino-5643426_f8z7t4.jpg" width="100%">
                 {% else %}
-                <img src=" {{ recipe.image.url }}" alt="">
+                <img src=" {{ recipe.image.url }}" alt="food image">
                 {% endif %}
             </div>
         </div>
@@ -41,9 +41,10 @@
                         </div>
                     </div>
                     <div class="col-6">
-                        <img class="food-image" src="{{ post.image.url }}" alt=""> 
+                        <img class="food-image-postdetail" src="{{ post.image.url }}" alt=""> 
                     </div>
                 </div>
+                <hr class="hr-post">
                 <div>
                     <h4>Description:</h4>
                     <p class="card-text ">                        
@@ -77,7 +78,7 @@
     </div>
     <div class="row">
         <div class="col">
-            <hr>
+            <hr class="hr-post">
         </div>
     </div>
     <div class="row">
@@ -86,7 +87,7 @@
             <div class="card-body">
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for Comment in comments %}
-                <div class="comments" style="padding: 10px;">
+                <div class="comments">
                     <p class="font-weight-bold">
                         <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
                         {{ Comment.name }}
@@ -103,7 +104,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card-body">
+            <div>
                 {% if commented %}
                 <div class="alert alert-success" role="alert">
                     Your comment is awaiting approval

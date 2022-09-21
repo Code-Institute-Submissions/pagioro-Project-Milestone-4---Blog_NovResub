@@ -3,6 +3,7 @@
 body {  
   background-color: #F9F9F9;
   width: 100%;
+  font-family: lora, Helvetica, sans-serif;
 }
 
 #main-section {
@@ -24,8 +25,7 @@ body {
   font-weight: 600; 
 }
 
-.login,
-.logout {
+.login {
   border-left: 2px solid #EAEFF2;
 }
 
@@ -165,19 +165,37 @@ i {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 0.938rem;
+}
+
+.food-image-postdetail {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .group {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
-  margin-bottom: 120px;
+  font-size: 1.25rem;
 }
 
 .span_bold {
   font-weight: bold;
+}
+
+.hr-post {
+  margin: 15px 0 15px;
+}
+
+.requiredField {
+  display: none;
+}
+
+element.style {
+  display: none;
 }
 
 /* --- Middle Section about.html --- */
