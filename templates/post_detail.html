@@ -16,9 +16,9 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.image.url %}
-                <img src="https://res.cloudinary.com/epari/image/upload/v1663764105/pexels-nyara-aquino-5643426_f8z7t4.jpg" width="100%">
+                <img src="https://res.cloudinary.com/epari/image/upload/v1663764105/pexels-nyara-aquino-5643426_f8z7t4.jpg" width="80%">
                 {% else %}
-                <img src=" {{ recipe.image.url }}" alt="food image">
+                <img src=" {{ recipe.image.url }}">
                 {% endif %}
             </div>
         </div>
