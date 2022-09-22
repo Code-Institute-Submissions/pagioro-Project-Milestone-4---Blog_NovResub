@@ -33,7 +33,21 @@
 			<a href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest-p"></i></a>
 			<a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
 		</div>
-	</section>       
+	</section>
+
+  <!-- Login and logout container message -->  
+  <div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            {% for message in messages %}
+            <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                {{ message | safe }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+  </div>
     
     <!-- Logo -->
     <section>
@@ -70,7 +84,7 @@
         </nav>
       </div>
       <hr>
-    </section>
+    </section>   
 
     <!--- Middle Section -->
     <main id="main-section">
@@ -110,7 +124,13 @@
 	</div>
 </section>
 
-<script src="assets/js/script.js"></script>	
+<script>
+  setTimeout(function () {
+      let messages = document.getElementById('msg');
+      let alert = new bootstrap.Alert(messages);
+      alert.close();
+  }, 10000);
+</script>
 
 </body>
 

@@ -94,6 +94,8 @@
             <hr class="hr-post">
         </div>
     </div>
+
+
     <div class="row">
         <div class="col-md-8">
             <h3>Comments:</h3>
@@ -120,7 +122,14 @@
             <div>
                 {% if commented %}
                 <div class="alert alert-success" role="alert">
-                    Your comment is awaiting approval
+                    Your comment is awaiting approval                    
+                </div>
+                {% for message in messages %}
+                    <div class="alert {{ message.tags }} alert alert-sucess fade show" id="msg" role="alert">
+                        {{ message | safe }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}                    
                 </div>
                 {% else %}
                 {% if user.is_authenticated %}
