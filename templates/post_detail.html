@@ -62,7 +62,7 @@
 
                 <div class="row">
                     <div class="col-1">
-                        <strong>
+                        <strong class="heart-likes">
                             {% if user.is_authenticated %}
                             <form class="d-inline" action="{% url 'recipe_likes' post.slug %}" method="POST">
                                 {% csrf_token %}
@@ -78,13 +78,7 @@
                             <span class="text-secondary"> {{ post.number_of_likes }} </span>
                         </strong>                        
                     </div>
-                    <div class="col-1">
-                        {% with Comment.count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
-                            <!-- Our total_comments variable goes before the closing strong tag -->
-                            {{ total_comments }}</strong>
-                        {% endwith %}
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -98,7 +92,14 @@
 
     <div class="row">
         <div class="col-md-8">
-            <h3>Comments:</h3>
+            <h3 class="comments-title">Comments:</h3>
+            <div class="col-1">
+                {% with Comment.count as total_comments %}
+                <strong class="text-secondary"><i class="far fa-comments"></i>
+                    <!-- Our total_comments variable goes before the closing strong tag -->
+                    {{ total_comments }}</strong>
+                {% endwith %}
+            </div>
             <div class="card-body">
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for Comment in comments %}
@@ -125,7 +126,7 @@
                     Your comment is awaiting approval                    
                 </div>
                 {% for message in messages %}
-                    <div class="alert {{ message.tags }} alert alert-sucess fade show" id="msg" role="alert">
+                    <div class="alert {{ message.tags }} alert alert-sucess fade show msg-submit" role="alert">
                         {{ message | safe }}
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>

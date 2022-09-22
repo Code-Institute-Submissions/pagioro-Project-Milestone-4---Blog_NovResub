@@ -200,6 +200,19 @@ element.style {
   display: none;
 }
 
+.btn-like {
+  border: none;
+  background-color: #f8f9fa;  
+}
+
+.comments-title {
+  margin-left: 1.25rem;
+}
+
+.heart-likes {
+  display: flex;
+}
+
 /* --- Middle Section about.html --- */
 
 .food-image-about {
