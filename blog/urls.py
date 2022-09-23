@@ -5,7 +5,8 @@ urlpatterns = [
     path("", views.RecipeList.as_view(), name="home"),
     path("<slug:slug>/", views.PostDetail.as_view(), name="post_detail"),
     path('like/<slug:slug>', views.PostLike.as_view(), name='recipe_likes'),
-    path("<slug:slug>/", views.add_recipe.as_view(), name='add_recipe'),
+    # path("<slug:slug>/", views.add_recipe, name='add_recipe/'),
+    path('addrecipe/', views.add_recipe, name='addrecipe'),
 ]
 
 # Example to follow

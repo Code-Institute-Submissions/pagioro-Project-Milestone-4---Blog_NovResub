@@ -8,10 +8,8 @@ from .forms import CommentForm
 def add_recipe(request):
 
     recipe_form = RecipeForm()
-    print(request.method)
     if request.method == "POST":
         recipe_form = RecipeForm(request.POST, request.FILES)
-        print(recipe_form.is_valid())
         if recipe_form.is_valid():
             recipe_form = recipe_form.save(commit=False)
             recipe_form.title = recipe_form.title.title()
