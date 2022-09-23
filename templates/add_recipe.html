@@ -5,36 +5,52 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-<div class="container">
+<div>
     <h1>Share your recipe!</h1>
-    <div class="row">
-        <div class="col mt-3 mb-5">
+    <div>
+        <div>
             <form action="{% url 'add_recipe' %}" method="POST" enctype="multipart/form-data">
-                {% csrf_token %}
-                <div class="row">
-                    <div class="col-6">
-                        {{ recipe_form.title|as_crispy_field }}
-                    </div>
-                    <div class="col-6">
-                        {{ recipe_form.cooking_time|as_crispy_field }}
-                    </div>
+                {% csrf_token %}                
+                <div>
+                    <label>Title: </label>
+                    {{ recipe_form.title|as_crispy_field }}
                 </div>
-                <div class="row">
-                    <div class="col-6">
-                        {{ recipe_form.excerpt|as_crispy_field }}
-                    </div>
+                <div>
+                     {{ recipe_form.excerpt|as_crispy_field }}
+                </div> 
+                <div>
+                    <Label>Preparation Time:</Label>
+                    {{ recipe_form.prep_time|as_crispy_field }}
+                </div>                
+                <div>
+                    <Label>Cooking Time:</Label>
+                    {{ recipe_form.cook_time|as_crispy_field|safe }}
                 </div>
-                <div class="row">
+                <div>
+                    <Label>Serves:</Label>
+                    {{ recipe_form.serves|as_crispy_field|safe }}
+                </div>
+                <div>
+                    <Label>Calories:</Label>
+                    {{ recipe_form.calories|as_crispy_field|safe }}
+                </div>
+                <div>
+                    <Label>Ingredients:</Label>
                     {{ recipe_form.ingredients|as_crispy_field|safe }}
                 </div>
-                <div class="row">
+                <div>
+                    <Label>Description:</Label>
+                    {{ recipe_form.description|as_crispy_field|safe }}
+                </div>
+                <div>
+                    <Label>Method:</Label>
                     {{ recipe_form.method|as_crispy_field|safe }}
                 </div>
-                <div class="row">
-                    {{ recipe_form.featured_image|as_crispy_field }}
+                <div>
+                    {{ recipe_form.image|as_crispy_field }}
                     <p>If no image is uploaded a default image will be displayed</p>
                 </div>
-                <button type="submit" class="add-recipe-button">Submit</button>
+                <button type="submit" class="btn add-recipe-button">Submit</button>
             </form>
         </div>
     </div>

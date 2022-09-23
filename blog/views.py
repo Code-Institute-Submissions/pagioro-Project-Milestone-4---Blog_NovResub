@@ -2,7 +2,10 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Recipe, Comment
+from . import forms
 from .forms import CommentForm
+from .forms import RecipeForm
+
 
 #@login_required
 def add_recipe(request):
@@ -13,13 +16,12 @@ def add_recipe(request):
         if recipe_form.is_valid():
             recipe_form = recipe_form.save(commit=False)
             recipe_form.title = recipe_form.title.title()
-            recipe_form.author = request.id_user
+            recipe_form.id_user = request.id_user
             recipe_form.status_recipe = 1
             recipe_form.save()
             return redirect('home')
 
-    return render(request, 'add_recipe.html', context={'recipe_form':
-                  recipe_form})
+    return render(request, 'add_recipe.html', context={'recipe_form': recipe_form})
 
 class RecipeList(generic.ListView):
     model = Recipe
