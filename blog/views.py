@@ -16,7 +16,7 @@ def add_recipe(request):
         if recipe_form.is_valid():
             recipe_form = recipe_form.save(commit=False)
             recipe_form.title = recipe_form.title.title()
-            recipe_form.id_user = request.id_user
+            recipe_form.id_user = request.user
             recipe_form.status_recipe = 1
             recipe_form.save()
             return redirect('home')
@@ -33,12 +33,10 @@ class RecipeList(generic.ListView):
 class PostDetail(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = Recipe.objects.filter(status_recipe=1)
-        # recipe = get_object_or_404(Recipe, slug=slug)  
         post = get_object_or_404(queryset, slug=slug)         
-        comments = post.comments.filter(approved=True).order_by('-created_date') #voltar se estiver errado
+        comments = post.comments.filter(approved=True).order_by('-created_date') 
         liked = False
-        if post.likes.filter(id=self.request.user.id).exists(): #erro 
-            # User, related_name='recipe_l
+        if post.likes.filter(id=self.request.user.id).exists():
             liked = True
 
         return render(
@@ -58,10 +56,9 @@ class PostDetail(View):
         queryset = Recipe.objects.filter(status_recipe=1)
         recipe = get_object_or_404(Recipe, slug=slug)  
         post = get_object_or_404(queryset, slug=slug)               
-        comments = post.comments.filter(approved=True).order_by('-created_date') #voltar se estiver errado
+        comments = post.comments.filter(approved=True).order_by('-created_date') 
         liked = False
-        if post.likes.filter(id=self.request.user.id).exists(): #erro 
-            # User, related_name='recipe_l
+        if post.likes.filter(id=self.request.user.id).exists():
             liked = True
 
         comment_form = CommentForm(data=request.POST)

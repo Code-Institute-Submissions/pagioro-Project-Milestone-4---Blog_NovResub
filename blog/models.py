@@ -1,12 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
 # from django.core.validators import MaxValueValidator, MinValueValidator
-# from django_summernote.fields import SummernoteTextField
+from django_summernote.fields import SummernoteTextField
 # from django.template.defaultfilters import slugify
 from cloudinary.models import CloudinaryField
 
 STATUS_RECIPE = ((0, 'Draft'), (1, 'Published')) 
-# retirar recipe acima se der problema
 
 
 class Recipe(models.Model):
@@ -17,7 +16,6 @@ class Recipe(models.Model):
     id_recipe = models.AutoField(primary_key=True)  
     title = models.CharField(max_length=200, unique=True)
     id_user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='recipes')
-    # related_name='blog_posts'
     slug = models.SlugField(max_length=200, unique=True)    
     excerpt = models.TextField(blank=True)
     created_date = models.DateTimeField(auto_now_add=True)   
@@ -28,14 +26,11 @@ class Recipe(models.Model):
     serves = models.CharField(max_length=20, unique=False)
     calories = models.IntegerField(default=1)
     ingredients = models.TextField()
-    # SummernoteTextField() do exemplo
+    # ingredients = SummernoteTextField()
     description = models.TextField()
-    # SummernoteTextField()
     method = models.TextField()
-    # SummernoteTextField()    
     status_recipe = models.IntegerField(choices=STATUS_RECIPE, default=0)
     likes = models.ManyToManyField(User, related_name='recipe_likes', blank=True)
-    # do professor related_name='blog_likes'
 
 
     class Meta:

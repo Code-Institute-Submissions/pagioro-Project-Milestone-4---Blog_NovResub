@@ -16,19 +16,20 @@ class RecipeForm(forms.ModelForm):
         model = Recipe
         fields = [
             'title',
-            'excerpt',
-            'image',
+            'excerpt',            
             'prep_time',
             'cook_time',   
             'serves',
             'calories', 
-            'ingredients', 
+            'ingredients',
             'description', 
             'method',
+            'image',
         ]
 
         widgets = {
             'ingredients': SummernoteInplaceWidget(),
-            'instructions': SummernoteInplaceWidget()
+            'description': SummernoteInplaceWidget(),
+            'method': SummernoteInplaceWidget()
         }
 
