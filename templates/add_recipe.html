@@ -7,43 +7,44 @@
 {% if user.is_authenticated %}
 <div>
     <h1>Share your recipe!</h1>
+    <Label>* (required field)</Label>
     <div>
         <div>
             <form action="{% url 'add_recipe' %}" method="POST" enctype="multipart/form-data">
-                {% csrf_token %}                
+                {% csrf_token %}
                 <div>
-                    <label>Title: </label>
+                    <Label>Title *</Label>                    
                     {{ recipe_form.title|as_crispy_field }}
                 </div>
                 <div>
                      {{ recipe_form.excerpt|as_crispy_field }}
                 </div> 
                 <div>
-                    <Label>Preparation Time:</Label>
+                    <Label>Preparation Time *</Label>
                     {{ recipe_form.prep_time|as_crispy_field }}
                 </div>                
                 <div>
-                    <Label>Cooking Time:</Label>
+                    <Label>Cooking Time *</Label>
                     {{ recipe_form.cook_time|as_crispy_field|safe }}
                 </div>
                 <div>
-                    <Label>Serves:</Label>
+                    <Label>Serves *</Label>
                     {{ recipe_form.serves|as_crispy_field|safe }}
                 </div>
                 <div>
-                    <Label>Calories:</Label>
+                    <Label>Calories *</Label>
                     {{ recipe_form.calories|as_crispy_field|safe }}
                 </div>
                 <div>
-                    <Label>Ingredients:</Label>
+                    <Label>Ingredients *</Label>
                     {{ recipe_form.ingredients|as_crispy_field|safe }}
                 </div>
                 <div>
-                    <Label>Description:</Label>
+                    <Label>Description *</Label>
                     {{ recipe_form.description|as_crispy_field|safe }}
                 </div>
                 <div>
-                    <Label>Method:</Label>
+                    <Label>Method *</Label>
                     {{ recipe_form.method|as_crispy_field|safe }}
                 </div>
                 <div>

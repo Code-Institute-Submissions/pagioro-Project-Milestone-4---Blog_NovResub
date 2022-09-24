@@ -22,11 +22,10 @@ class Recipe(models.Model):
     updated_date = models.DateTimeField(auto_now=True)
     image = CloudinaryField('image', default='placeholder')
     prep_time = models.CharField(max_length=20)
-    cook_time = models.CharField(max_length=20, unique=False)
-    serves = models.CharField(max_length=20, unique=False)
-    calories = models.IntegerField(default=1)
+    cook_time = models.CharField(max_length=20)
+    serves = models.CharField(max_length=20)
+    calories = models.IntegerField()
     ingredients = models.TextField()
-    # ingredients = SummernoteTextField()
     description = models.TextField()
     method = models.TextField()
     status_recipe = models.IntegerField(choices=STATUS_RECIPE, default=0)
@@ -59,8 +58,7 @@ class Recipe(models.Model):
     def save(self, *args, **kwargs): 
      if not self.slug: 
            self.slug = slugify(self.title) 
-     return super().save(*args, **kwargs)
-    
+     return super().save(*args, **kwargs)    
 
 
 class Comment(models.Model):

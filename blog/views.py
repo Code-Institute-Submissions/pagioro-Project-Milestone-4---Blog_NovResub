@@ -1,13 +1,14 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 from .models import Recipe, Comment
 from . import forms
 from .forms import CommentForm
 from .forms import RecipeForm
 
 
-#@login_required
+@login_required
 def add_recipe(request):
 
     recipe_form = RecipeForm()
@@ -22,6 +23,7 @@ def add_recipe(request):
             return redirect('home')
 
     return render(request, 'add_recipe.html', context={'recipe_form': recipe_form})
+
 
 class RecipeList(generic.ListView):
     model = Recipe
