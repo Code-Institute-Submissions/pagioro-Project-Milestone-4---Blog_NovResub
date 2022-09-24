@@ -2,10 +2,11 @@ from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
+from django.views.generic.edit import UpdateView, DeleteView
+from django.urls import reverse_lazy
 from .models import Recipe, Comment
 from . import forms
-from .forms import CommentForm
-from .forms import RecipeForm
+from .forms import CommentForm, RecipeForm
 
 
 @login_required
@@ -96,3 +97,21 @@ class PostLike(View):
             recipe.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+class RecipeEditView(UpdateView):
+    """
+    Edit recipe
+    """
+    model = Recipe
+    form_class = RecipeForm
+    template_name_suffix = '_update_form'
+    template_name = 'edit_recipe.html'
+    success_url = '/'
+
+class RecipeDeleteView(DeleteView):
+    """
+    Delete Recipe
+    """
+    model = Recipe
+    template_name = 'delete_recipe.html'
+    success_url = reverse_lazy('home')

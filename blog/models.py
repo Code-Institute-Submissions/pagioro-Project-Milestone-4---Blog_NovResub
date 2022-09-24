@@ -75,7 +75,6 @@ class Comment(models.Model):
     content = models.TextField()
     created_date = models.DateTimeField(auto_now_add=True)
     email = models.EmailField() 
-    # ? models.EmailField()
     approved = models.BooleanField(default=False)
     # status_comment = models.IntegerField(choices=STATUS_COMMENT, default=0)
 
