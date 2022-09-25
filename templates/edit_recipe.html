@@ -5,11 +5,14 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
+
 <div class="container">
     {% if request.user == recipe.id_user %}
+
     <div class="row mt-5">
         <div class="col-md-3 col-sm-6">
-            <a href="{% url 'post_detail' recipe.slug %}" class="btn btn-light">Back to Feed</a>
+            <a href="{% url 'post_detail' post.slug %}" class="btn btn-light">Back to Feed</a>
         </div>
     </div>
     <div class="row justify-content-center mt-5">
@@ -27,13 +30,14 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div>    
     {% else %}
     <p>You are not authorized to visit this page.</p>
     <div class="container text-center">
         <a href="{% url 'home' %}" class="back-button btn-default">Back</a>
     </div>
-    {% endif %}
+    {% endif %}    
 </div>
+{% endif %}
 
 {% endblock %}

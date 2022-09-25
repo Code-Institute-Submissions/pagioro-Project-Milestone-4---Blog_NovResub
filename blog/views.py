@@ -7,7 +7,7 @@ from django.urls import reverse_lazy
 from .models import Recipe, Comment
 from . import forms
 from .forms import CommentForm, RecipeForm
-
+#from django.conf import settings
 
 @login_required
 def add_recipe(request):
@@ -33,16 +33,17 @@ class RecipeList(generic.ListView):
     paginate_by = 6
     print(queryset)
 
+
 class PostDetail(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = Recipe.objects.filter(status_recipe=1)
-        post = get_object_or_404(queryset, slug=slug)         
-        comments = post.comments.filter(approved=True).order_by('-created_date') 
+        post = get_object_or_404(queryset, slug=slug) #trocar para recipe          
+        comments = post.comments.filter(approved=True).order_by('-created_date') #trocar para recipe 
         liked = False
-        if post.likes.filter(id=self.request.user.id).exists():
-            liked = True
-
-        return render(
+        if post.likes.filter(id=self.request.user.id).exists(): #trocar para recipe
+            liked = True            
+            
+            return render(
             request,
             "post_detail.html",
             {
@@ -53,8 +54,8 @@ class PostDetail(View):
                 "comment_form": CommentForm()
             },
         )
-
-
+        
+        
     def post(self, request, slug, *args, **kwargs):
         queryset = Recipe.objects.filter(status_recipe=1)
         recipe = get_object_or_404(Recipe, slug=slug)  
