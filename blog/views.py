@@ -41,8 +41,9 @@ class PostDetail(View):
         comments = post.comments.filter(approved=True).order_by('-created_date') #trocar para recipe 
         liked = False
         if post.likes.filter(id=self.request.user.id).exists(): #trocar para recipe
-            liked = True            
-            
+            liked = True  
+
+        else:   
             return render(
             request,
             "post_detail.html",
