@@ -1,76 +1,5 @@
-{% extends 'base.html' %} 
-
-<!DOCTYPE html>
-<html lang="en">
-
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Complete Bootstrap 4 Website Layout</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>		
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-		<link href="{% static 'css/style.css' %}" rel="stylesheet">			
-	</head>
-
-  <body>
-
-    <!-- Header-top-bar -->
-	<section id="header-top">
-		<div class="signup-login">		
-      {% if user.is_authenticated %}
-			  <a href="{% url 'account_logout' %}" class="logout">Logout</a>	
-      {% else %}	
-        <a href="{% url 'account_signup' %}" class="signup">Sign Up</a>	      
-        <a href="{% url 'account_login' %}" class="login">Login</a>	
-      {% endif %}
-		</div>		
-		<div class="social-list">			
-			<a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-			<a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-			<a href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest-p"></i></a>
-			<a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-		</div>
-	</section>       
-    
-    <!-- Logo -->
-    <section>
-      <div class="logo">
-        <a class="brand" href="{% url 'home' %}"><img class="img-fluid" src="../static/css/images/logo.png" alt="Website Logo"></a>
-      </div>
-    </section>
-  
-    <!-- Navigation -->
-    <section>
-      <hr>
-      <div id="navbarblock">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="{% url 'home' %}"><img class="img-fluid" src="../static/css/images/logo.png" alt="Website Logo"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Add Recipe</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'about' %}">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-            </li>					
-          </ul>
-        </div>
-        </nav>
-      </div>
-      <hr>
-    </section>
+{% extends 'base.html' %}
+{% block content %}
 
 <!--- Middle Section -->
 <main id="main-section">
@@ -102,7 +31,7 @@
 			<div class="col-sm-4">
 				<div class="about-me">
 					<h6 class="text-center aboutme-main">ABOUT ME</h6>
-					<img class="aboutme-image" src="assets/images/about me.jpg" alt="about me">
+					<img class="aboutme-image" src="https://res.cloudinary.com/epari/image/upload/v1664116613/about_zw3fkw.jpg" alt="about me">
 					<h6 class="text-center about-name">Lorem</h6>
 					<p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam praesentium tempore dolor alias animi, minima assumenda.</p>
 					<div class="social-list-about">			
@@ -117,39 +46,4 @@
 	</section>
 </main>
 
-<!--- Subscribe --->
-	
-<section>	
-	<section id="subscribe">
-		<div class="subscribe-left">			
-			<h5>Don't miss a single recipe!</h5>
-			<p>Subscribe to receive new recipes straight to your inbox!</p>	
-		</div>
-		<div class="subscribe-right">			
-			<input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Your email address">
-			<a href="#" class="btn btn-subscribe">SUBSCRIBE</a>	
-		</div>
-	</section>
-
-<!--- Footer -->
-
-<section id="footer">	
-<div class="footer-social">			
-	<a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-	<a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-	<a href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest-p"></i></a>
-	<a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-</div>	
-</section>	
-<section id="footer-contact">
-<div class="footer-contact-align">			
-	<a href="#" class="footer-contact"><i class="fa-solid fa-envelope"></i>contact</a>
-	<p class="footer-p">© 2022. Created by Elcio Pagioro Pari</p>		
-</div>
-</section>
-
-<script src="assets/js/script.js"></script>	
-
-</body>
-
-</html>
+{% endblock content %}

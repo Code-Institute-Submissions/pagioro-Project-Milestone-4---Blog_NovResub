@@ -73,10 +73,10 @@
             <a class="nav-link" href="{% url 'add_recipe' %}">Add Recipe</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="{% url 'about' %}">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
             </li>					
           </ul>
         </div>
@@ -118,7 +118,7 @@
 </section>	
 <section id="footer-contact">
 	<div class="footer-contact-align">			
-		<a href="#" class="footer-contact"><i class="fa-solid fa-envelope"></i>contact</a>
+		<a href="{% url 'contact' %}" class="footer-contact"><i class="fa-solid fa-envelope"></i>contact</a>
 		<p class="footer-p">© 2022. Created by Elcio Pagioro Pari</p>		
 	</div>
 </section>
@@ -129,13 +129,6 @@
       let alert = new bootstrap.Alert(messages);
       alert.close();
   }, 2500);
-
-  setTimeout(function () {
-      let message = document.getElementsByClassName('msg-submit');
-      let alert = new bootstrap.Alert(messages);
-      alert.close();
-  }, 5000);
-
 
 </script>
 

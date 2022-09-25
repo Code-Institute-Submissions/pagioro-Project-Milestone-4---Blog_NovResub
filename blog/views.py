@@ -37,10 +37,10 @@ class RecipeList(generic.ListView):
 class PostDetail(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = Recipe.objects.filter(status_recipe=1)
-        post = get_object_or_404(queryset, slug=slug) #trocar para recipe          
-        comments = post.comments.filter(approved=True).order_by('-created_date') #trocar para recipe 
+        post = get_object_or_404(queryset, slug=slug)        
+        comments = post.comments.filter(approved=True).order_by('-created_date') 
         liked = False
-        if post.likes.filter(id=self.request.user.id).exists(): #trocar para recipe
+        if post.likes.filter(id=self.request.user.id).exists(): 
             liked = True  
 
         else:   
@@ -117,3 +117,15 @@ class RecipeDeleteView(DeleteView):
     model = Recipe
     template_name = 'delete_recipe.html'
     success_url = reverse_lazy('home')
+
+def about(request):
+    """
+    About page
+    """
+    return render(request, 'about.html')
+
+def contact(request):
+    """
+    Contact page
+    """
+    return render(request, 'contact.html')

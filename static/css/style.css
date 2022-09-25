@@ -215,16 +215,14 @@ element.style {
 
 /* --- Middle Section about.html --- */
 
-.food-image-about {
-  width: 100%;
-}
-
 .about-h1 {
   margin-bottom: 0.938rem;
 }
 
 .food-image-about {
+  width: 50%;
   margin: 0.938rem 0 0.938rem;
+  
 }
 
 .about-me {
