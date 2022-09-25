@@ -129,7 +129,12 @@
                     <div class="alert {{ message.tags }} alert alert-sucess fade show msg-submit" role="alert">
                         {{ message | safe }}
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
+                    </div> 
+                    {% if request.user == comment.id_user %}
+                    <form method="POST" action="{% url 'delete_comment' comment.pk %}"> {% csrf_token %}
+                        <input class="btn-sm btn-outline-danger" type="submit" value="Delete comment">
+                    </form>
+                    {% endif %}
                 {% endfor %}                    
                 </div>
                 {% else %}

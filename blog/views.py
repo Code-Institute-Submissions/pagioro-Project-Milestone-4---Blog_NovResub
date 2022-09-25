@@ -11,7 +11,6 @@ from .forms import CommentForm, RecipeForm
 
 @login_required
 def add_recipe(request):
-
     recipe_form = RecipeForm()
     if request.method == "POST":
         recipe_form = RecipeForm(request.POST, request.FILES)
@@ -32,7 +31,7 @@ class RecipeList(generic.ListView):
     template_name = 'index.html'
     paginate_by = 6
     print(queryset)
-
+    
 
 class PostDetail(View):
     def get(self, request, slug, *args, **kwargs):
@@ -41,12 +40,12 @@ class PostDetail(View):
         comments = post.comments.filter(approved=True).order_by('-created_date') 
         liked = False
         if post.likes.filter(id=self.request.user.id).exists(): 
-            liked = True  
-
-        else:   
-            return render(
+            liked = True
+            
+        """else:   """
+        return render(
             request,
-            "post_detail.html",
+            'post_detail.html',
             {
                 "post": post,
                 "comments": comments,
@@ -79,7 +78,7 @@ class PostDetail(View):
 
         return render(
             request,
-            "post_detail.html",
+            'post_detail.html',
             {
                 "post": post,
                 "comments": comments,
@@ -99,7 +98,8 @@ class PostLike(View):
             recipe.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-
+        
+        
 class RecipeEditView(UpdateView):
     """
     Edit recipe
@@ -129,3 +129,11 @@ def contact(request):
     Contact page
     """
     return render(request, 'contact.html')
+
+class RecipeDeleteComment(DeleteView):
+    """
+    Delete comment
+    """
+    model = Comment
+    template_name = 'delete_comment.html'
+    success_url = reverse_lazy('home')
