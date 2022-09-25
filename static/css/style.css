@@ -11,7 +11,7 @@ body {
   margin: 0 auto;
 }
 
-/*----- Header-top-bar -----*/
+/*----- Header-top-bar -----*/  
 
 #header-top {
   background-color: #95b5ac!important;  
@@ -220,9 +220,8 @@ element.style {
 }
 
 .food-image-about {
-  width: 50%;
+  width: 70%;
   margin: 0.938rem 0 0.938rem;
-  
 }
 
 .about-me {
