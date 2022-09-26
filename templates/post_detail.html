@@ -158,13 +158,13 @@
 <!-- Update/Delete recipe -->
 <div class="container mt-4">
     <div class="row">
-        <div class="col-6">
+        <div class="col">
             {% if request.user == post.id_user %}
             <h5>Manage your recipe:</h5>
-            <strong>{{ Recipe.id_user }}</strong> - {{ Recipe.title }}
+            <strong>{{ post.id_user }}</strong> - {{ post.title }}
             <p><a href="{% url 'edit_recipe' post.slug %}"><button
                 class="btn btn-success edit-recipe"><i class="fa fa-edit"></i> | Edit</button></a>
-              <a href="{% url 'delete_recipe' post.slug %}"><button class="btn btn-danger">
+              <a href="{% url 'delete_recipe' slug %}"><button class="btn btn-danger">
                 <i class="fa fa-trash"></i> | Delete</button></a></p>
             {% endif %}
         </div>
@@ -172,7 +172,7 @@
 </div>
 <div class="container text-center">
     <br /><br />
-    <a href="{% url 'home' %}" class="back-button btn-default">Back</a>
+    <a href="{% url 'home' %}" class="btn back-button btn-default">Back</a>
 </div>
 
 {% endblock content %}
