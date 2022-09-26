@@ -162,9 +162,9 @@
             {% if request.user == post.id_user %}
             <h5>Manage your recipe:</h5>
             <strong>{{ Recipe.id_user }}</strong> - {{ Recipe.title }}
-            <p><a href="{% url 'edit_recipe' recipe.slug %}"><button
+            <p><a href="{% url 'edit_recipe' post.slug %}"><button
                 class="btn btn-success edit-recipe"><i class="fa fa-edit"></i> | Edit</button></a>
-              <a href="{% url 'delete_recipe' recipe.slug %}"><button class="btn btn-danger">
+              <a href="{% url 'delete_recipe' post.slug %}"><button class="btn btn-danger">
                 <i class="fa fa-trash"></i> | Delete</button></a></p>
             {% endif %}
         </div>
