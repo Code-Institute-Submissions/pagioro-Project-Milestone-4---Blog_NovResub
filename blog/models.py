@@ -69,7 +69,7 @@ class Comment(models.Model):
     # id_comment = models.IntegerField(unique=True)
     id_recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="comments")
     # related_name ?
-    # id_user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='author_comments')
+    id_user = models.ForeignKey(User, on_delete=models.CASCADE, default=1, related_name='comments')
     name = models.CharField(max_length=80) 
     # criado pelo professor
     content = models.TextField()

@@ -15,6 +15,8 @@ urlpatterns = [
     path("<slug:slug>/", views.PostDetail.as_view(), name="post_detail"),
 ]
 
+# 
+
 # Example to follow
 
 # from django.urls import path
