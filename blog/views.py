@@ -101,7 +101,7 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
         
         
-class RecipeEditView(UpdateView):
+class RecipeEditView(UpdateView):    
     """
     Edit recipe
     """
@@ -111,6 +111,12 @@ class RecipeEditView(UpdateView):
     template_name = 'edit_recipe.html'
     success_url = '/'
 
+    def get_context_data(self, *args, **kwargs):
+        context = super(RecipeEditView, self).get_context_data(*args, **kwargs)
+        post = self.get_object()
+        context['post'] = post
+        return context
+
 class RecipeDeleteView(DeleteView):
     """
     Delete Recipe
@@ -118,6 +124,12 @@ class RecipeDeleteView(DeleteView):
     model = Recipe
     template_name = 'delete_recipe.html'
     success_url = reverse_lazy('home')
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(RecipeDeleteView, self).get_context_data(*args, **kwargs)
+        post = self.get_object()
+        context['post'] = post
+        return context
 
 def about(request):
     """
