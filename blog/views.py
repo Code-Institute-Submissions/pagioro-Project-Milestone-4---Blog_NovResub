@@ -7,7 +7,7 @@ from django.urls import reverse_lazy
 from .models import Recipe, Comment
 from . import forms
 from .forms import CommentForm, RecipeForm
-#from django.conf import settings
+# from django.conf import settings
 
 @login_required
 def add_recipe(request):
@@ -82,6 +82,7 @@ class PostDetail(View):
             'post_detail.html',
             {
                 "post": post,
+                "slug": post.slug,
                 "comments": comments,
                 "commented": True,
                 "liked": liked,
@@ -157,5 +158,3 @@ class RecipeDeleteComment(DeleteView):
         post = self.get_object()
         context['post'] = post
         return context
-
-    
