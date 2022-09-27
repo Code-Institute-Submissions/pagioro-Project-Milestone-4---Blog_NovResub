@@ -114,8 +114,10 @@
                     </p>
                     <!-- The body of the comment goes before the | -->
                     {{ Comment.content | linebreaks }}
+                    {% if request.user == Comment.id_user %}
                         <p><a href="{% url 'delete_comment' Comment.pk %}">
                         <button class="btn-danger"><i class="fa fa-trash"></i> | Delete</button></a></p>
+                    {% endif %}
                 </div>
 
                 <!-- Our for loop ends here -->
