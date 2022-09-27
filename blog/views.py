@@ -88,6 +88,7 @@ class PostDetail(View):
                 "comment_form": CommentForm()
             },
         )
+        
 
 class PostLike(View):
     def post(self, request, slug):
@@ -150,3 +151,11 @@ class RecipeDeleteComment(DeleteView):
     model = Comment
     template_name = 'delete_comment.html'
     success_url = reverse_lazy('home')
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(RecipeDeleteComment, self).get_context_data(*args, **kwargs)
+        post = self.get_object()
+        context['post'] = post
+        return context
+
+    
