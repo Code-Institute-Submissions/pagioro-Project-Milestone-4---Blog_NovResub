@@ -6,15 +6,12 @@
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
-                <div>
-                    <!-- Post title goes in these h1 tags -->
+                <div>                    
                     <h1 class="post-title">{{ post.title }}</h1>
-                    <!-- Post author goes before the | the post's created date goes after -->
                     <p class="post-subtitle">{{ post.id_user }} | {{ post.created_date }}</p>
                 </div>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.image.url %}
                 <img src="https://res.cloudinary.com/epari/image/upload/v1663764105/pexels-nyara-aquino-5643426_f8z7t4.jpg" width="80%">
                 {% else %}
@@ -29,8 +26,6 @@
     <div class="row">
         <div class="col">
             <div class="card-body">
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
                 <div class="row">
                     <div class="col-6 group">
                         <div>
@@ -89,38 +84,31 @@
         </div>
     </div>
 
-
+    <!-- Comments -->
     <div class="row">
         <div class="col-md-8">
             <h3 class="comments-title">Comments:</h3>
             <div class="col-1">
                 {% with Comment.count as total_comments %}
-                <strong class="text-secondary"><i class="far fa-comments"></i>
-                    <!-- Our total_comments variable goes before the closing strong tag -->
+                <strong class="text-secondary"><i class="far fa-comments"></i>                    
                     {{ total_comments }}</strong>
                 {% endwith %}
             </div>
             <div class="card-body">
-                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for Comment in comments %}
                 <div class="comments">
                     <p class="font-weight-bold">
-                        <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
                         {{ Comment.name }}
                         <span class=" text-muted font-weight-normal">
-                            <!-- The comment's created date goes here -->
                             {{ Comment.created_date }}
                         </span> wrote:
                     </p>
-                    <!-- The body of the comment goes before the | -->
                     {{ Comment.content | linebreaks }}
                     {% if request.user == Comment.id_user %}
                         <p><a href="{% url 'delete_comment' Comment.pk %}">
                         <button class="btn-danger"><i class="fa fa-trash"></i> | Delete</button></a></p>
                     {% endif %}
                 </div>
-
-                <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
         </div>

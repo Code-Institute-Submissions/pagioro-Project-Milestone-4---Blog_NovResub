@@ -1,9 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
-# from django.core.validators import MaxValueValidator, MinValueValidator
 from django_summernote.fields import SummernoteTextField
 from django.template.defaultfilters import slugify
 from cloudinary.models import CloudinaryField
+# from django.core.validators import MaxValueValidator, MinValueValidator
 
 STATUS_RECIPE = ((0, 'Draft'), (1, 'Published')) 
 
@@ -50,10 +50,6 @@ class Recipe(models.Model):
         """
         return self.likes.count()
 
-    
-    # def save(self, *args, **kwargs):
-    #     self.slug = slugify(self.title)
-    #     return super().save(*args, **kwargs)
 
     def save(self, *args, **kwargs): 
      if not self.slug: 
@@ -65,18 +61,14 @@ class Comment(models.Model):
     """
     Model for comment
     """
-    id_comment = models.AutoField(primary_key=True)    
-    # id_comment = models.IntegerField(unique=True)
+    id_comment = models.AutoField(primary_key=True)
     id_recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="comments")
-    # related_name ?
     id_user = models.ForeignKey(User, on_delete=models.CASCADE, default=1, related_name='comments')
-    name = models.CharField(max_length=80) 
-    # criado pelo professor
+    name = models.CharField(max_length=80)
     content = models.TextField()
     created_date = models.DateTimeField(auto_now_add=True)
     email = models.EmailField() 
     approved = models.BooleanField(default=False)
-    # status_comment = models.IntegerField(choices=STATUS_COMMENT, default=0)
 
 
 class Meta:
@@ -94,7 +86,6 @@ class Contact(models.Model):
     """
     Model for contact
     """
-
     email = models.EmailField() 
     registration_date = models.DateTimeField(auto_now_add=True)
 
@@ -105,19 +96,3 @@ class Meta:
     """
     ordering = ['-registration_date']
 
-"""
-class User(models.Model):
-    
-    Model for user
-    
-
-    id_user = models.IntegerField(unique=True)
-    name = models.CharField(max_length=80, unique=True)
-       
-
-class Meta:
-    
-    Orders the users in ascending order
-    
-    ordering = ['-name']
-"""

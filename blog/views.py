@@ -7,7 +7,7 @@ from django.urls import reverse_lazy
 from .models import Recipe, Comment
 from . import forms
 from .forms import CommentForm, RecipeForm
-# from django.conf import settings
+
 
 @login_required
 def add_recipe(request):
@@ -89,8 +89,8 @@ class PostDetail(View):
                 "comment_form": CommentForm()
             },
         )
-        
 
+        
 class PostLike(View):
     def post(self, request, slug):
         recipe = get_object_or_404(Recipe, slug=slug)
