@@ -391,7 +391,17 @@ p.footer-p {
 }
 
 @media (max-width: 576px) {
-  /* Contact page */
+
+  /* Header-top-bar */  
+
+  .social-list > a {    
+    padding: 0;     
+  }
+
+
+
+
+/* Contact page */
   .col-sm-4 {
     margin-top: 0.625rem;
   }
@@ -400,7 +410,7 @@ p.footer-p {
     margin-top: 0.625rem;
   }
 
-/* --- CONTINUE READING post_detail.html --- */
+/* CONTINUE READING post_detail.html */
 
 .group {
   font-size: 12px;  
