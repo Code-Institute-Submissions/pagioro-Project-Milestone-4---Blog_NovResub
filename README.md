@@ -5,7 +5,7 @@ A website made for you, with the best typical recipes from Brazil.
 Our objective is to encourage and promote Brazilian gastronomy's
 richness, complexity and cultural diversity.
 
-<!-- [View the live project here](Add website here after deployment "Link to deployed site - Lulu's Kitchen") -->
+[View the live project here](https://project4blog.herokuapp.com/ "Link to deployed site - Lulu's Kitchen")
 
 ## Contents
 * **Introduction**
