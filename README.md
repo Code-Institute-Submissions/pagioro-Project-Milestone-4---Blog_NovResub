@@ -41,3 +41,58 @@ richness, complexity and cultural diversity.
 
 **Planning Stage**
 
+I started the project thinking about what functionality it should have, first creating the wireframe. After that, I worked on the database and on the HTML and CSS codes to be able to visualize my creation and only then start adding the codes.
+
+**Project Goals**
+
+It was the creation of a responsive recipe blog that works on any mobile device and is more focused on Brazilian food, but that doesn't prevent anyone from adding their recipes, regardless of where they are.
+The blog is interactive; you can share and comment on recipes already posted.
+
+**Site Owner Goals**
+
+* Provide an interactive and easy-to-use website.
+* Connecting people who enjoy good food.
+
+**User Goals**
+
+* Ability to share their own favorite recipes.
+* Create user account to interact.
+
+**User Stories**
+
+Site pagination
+As a Site User I can view a paginated list of posts so that easily select a post to view
+
+Approve comments
+As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments
+
+Create Drafts
+As a Site Admin I can create draft posts so that I can finish writing the content later
+
+Manage Posts
+As a Site Admin I can create, read, update and delete posts so that I can manage my blog content
+
+Like / Unlike
+As a Site User I can like or unlike a post so that I can interact with the content
+
+Comment on a post
+As a Site User I can leave comments on a post so that I can be involved in the conversation
+
+Account Registration
+As a Site User I can register an account so that I can comment and like
+
+View comments
+As a Site User / Admin I can view comments on an individual post so that I can read the conversation
+
+View likes
+As a Site User / Admin I can view the number of likes on each post so that I can see which is the most popular or viral
+
+Open a post
+As a Site User I can click on a post so that I can read the full text
+
+View post list
+As a Site User I can view a list of posts so that I can select one to read
+
+
+
+
