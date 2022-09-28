@@ -392,13 +392,18 @@ p.footer-p {
 
 @media (max-width: 576px) {
 
-  /* Header-top-bar */  
+/* Header-top-bar */  
 
   .social-list > a {    
     padding: 0;     
   }
 
 
+/* Nav Bar Logo Menu Hamburguer */ 
+
+  .logo-nav-small {
+    max-width: 180%;
+  }
 
 
 /* Contact page */
@@ -410,10 +415,23 @@ p.footer-p {
     margin-top: 0.625rem;
   }
 
+
 /* CONTINUE READING post_detail.html */
 
 .group {
   font-size: 12px;  
+}
+
+/* Footer base.html */
+
+p.footer-p {
+  font-size: small;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
   
