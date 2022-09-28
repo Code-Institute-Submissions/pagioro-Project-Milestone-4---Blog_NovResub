@@ -63,7 +63,7 @@ class Comment(models.Model):
     """
     id_comment = models.AutoField(primary_key=True)
     id_recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="comments")
-    id_user = models.ForeignKey(User, on_delete=models.CASCADE, default=1, related_name='comments')
+    id_user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments')
     name = models.CharField(max_length=80)
     content = models.TextField()
     created_date = models.DateTimeField(auto_now_add=True)
