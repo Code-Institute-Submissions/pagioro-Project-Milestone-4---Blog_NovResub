@@ -171,6 +171,10 @@ i {
   flex-direction: column;
 }
 
+.add-recipe-table > h3 {
+  margin-top: 0.938rem;
+}
+
 /* --- CONTINUE READING post_detail.html --- */
 
 .masthead-text {
@@ -429,6 +433,12 @@ p.footer-p {
 
 .group {
   font-size: 12px;  
+}
+
+/* add_recipe.html */
+
+.add-recipe-table > div {
+  width: 100%;
 }
 
 /* Footer base.html */
