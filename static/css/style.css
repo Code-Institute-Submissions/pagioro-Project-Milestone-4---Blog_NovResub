@@ -441,6 +441,10 @@ p.footer-p {
   width: 100%;
 }
 
+.summernote {
+  width: 100%;
+}
+
 /* Footer base.html */
 
 p.footer-p {
