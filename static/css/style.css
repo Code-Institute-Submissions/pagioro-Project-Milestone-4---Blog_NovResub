@@ -162,6 +162,13 @@ i {
   border: 1px solid #95b5ac;  
 }
 
+/* --- add_recipe.html --- */
+
+.add-recipe-table {
+  display: flex;
+  justify-content: center;
+}
+
 /* --- CONTINUE READING post_detail.html --- */
 
 .masthead-text {
