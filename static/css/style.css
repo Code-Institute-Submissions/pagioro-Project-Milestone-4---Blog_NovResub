@@ -171,6 +171,10 @@ i {
   flex-direction: column;
 }
 
+.add-recipe-table > div {
+  width: 100%;
+}
+
 /* --- CONTINUE READING post_detail.html --- */
 
 .masthead-text {
