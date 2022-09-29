@@ -169,10 +169,15 @@ i {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 0 0.625rem;
 }
 
 .add-recipe-table > h3 {
   margin-top: 0.938rem;
+}
+
+..add-recipe-table > label {
+  font-size: small;
 }
 
 /* --- CONTINUE READING post_detail.html --- */
@@ -435,16 +440,6 @@ p.footer-p {
   font-size: 12px;  
 }
 
-/* add_recipe.html */
-
-.add-recipe-table > div {
-  width: 100%;
-}
-
-.add-recipe-table {
-  margin: 0 0.625rem 0 0.625rem,
-}
-
 /* Footer base.html */
 
 p.footer-p {
@@ -456,7 +451,6 @@ p.footer-p {
   flex-direction: column;
   justify-content: center;
 }
-
   
 }
 
