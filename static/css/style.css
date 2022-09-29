@@ -167,6 +167,8 @@ i {
 .add-recipe-table {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* --- CONTINUE READING post_detail.html --- */
