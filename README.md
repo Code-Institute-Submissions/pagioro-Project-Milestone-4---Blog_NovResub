@@ -156,5 +156,63 @@ The footer is simple in muted colour tones, and consists of a subscribe bar, cop
 
 ### Existing Features
 
+* **Header Logo** appears on every page for consistency and easy navigation, clicking the logo takes you back to the home page.
+* **Header Nav-Bar** appears on every page for consistency and easy navigation, and the Nav-Bar toggles on smaller screens for a better user experience. The Nav-Bar presents different links if the user is logged in or not.
+* **Home Page Image** is to greet the site user and instantly provide what the site is.
+* **Recipe Cards** are displayed on the homepage six per page; if there are more than six recipes on the site, they will be displayed on another page. The arrows at the end will show the user the navigation to the following recipes. Cards contain author information, title, creation, short description, number of likes and an image. A default recipe image will appear if the user does not choose a specific image.
+* **Recipe Form** can be used by logged-in users. Here, users with an account can add their recipes and edit their own recipes.
+* **Comment form** 
+is displayed below each recipe when viewed. Logged-in users can comment on recipes and also delete their comments.
+* **Comments section** is where all users, logged in or not can read all comments, who wrote them and when. 
+* **Like/Unlike button** appears on the recipe website, and all logged-in users can like/unlike the recipes.
+* **About the page** provides the user with information about the site and its creator.
+* **Recipe page** is displayed when clicking on a recipe. All users, logged in or not, can view the recipe details here. This page also includes features to like and comment on if you are a logged-in user. If you are the author of the recipe, from here, you may be redirected to edit/delete your recipe.
+* **Edit/Delete Recipe** is where the recipe author can edit and/or delete their recipes.
+* **Login page** here users who have already created an account can log in.
+* **Registration page** is where new users can create a new account to interact with the site.
+* **Logout** is a page for the user to confirm their desire to log out of their account.
+
+**Future Features**
+
+* **Welcome page**
+
+A welcome page has not been added, which will be made shortly.
+
+* **Print Recipes**
+
+I would add a print button and by clicking open a pdf file with the recipe information to be printed.
+
+* **Search Recipes**
+
+I would add an exciting feature to search for recipes on the site.
+
+* **Categorize**
+
+Add a category for each type of recipe.
+
+* **Subscribe**
+
+I added the button but not the function where the user would put his email to receive news, this site but still without functionality.
+
+* **Contact Form**
+
+The contact form has been added, but it still doesn't work. I will make it work soon.
+
+[Back to content](#contents)
+
+
+## **Testing**
+
+
+
+[Back to content](#contents)
+
+
+
+
+
+
+
+
 
 
