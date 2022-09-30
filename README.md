@@ -142,18 +142,19 @@ I used Balsamic wireframe to define the site's basic structure and visualize the
 ### Design Features
 
 * Header
+
 The header consists of a sign-up and login bar in the upper left and social media in the upper right corner. The logo is also centred and stands out due to its size. The navigation menu is simple, easy to use, centralized, and can be seen on all pages.
 In responsive mode, the navigation turns into a hamburger button, and the site's logo goes to the top left corner.
 
-
 * Home Page
 
-
+When visiting the site, you are already received with the recipes registered with the user registration button and in the menu below the button that will take you to the page to add new recipes.
 
 * Footer
 
-
-
+The footer is simple in muted colour tones, and consists of a subscribe bar, copyright information, and social media links.
 
 ### Existing Features
+
+
 
