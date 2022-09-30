@@ -105,5 +105,11 @@ On the site, I chose to use softer colours so that the attention wouldn't divert
 - light gray - #ced4da - Subscribe and contact bar
 
 
+* Logo Lulu's Kitchen
+
+I used Photoshop to create my logo and decided on a text and a small image on the left. 
+
+![Logo](/static/css/images/logo.png)
+
 
 
