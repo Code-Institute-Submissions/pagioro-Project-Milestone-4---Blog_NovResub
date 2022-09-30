@@ -107,9 +107,26 @@ On the site, I chose to use softer colours so that the attention wouldn't divert
 
 * Logo Lulu's Kitchen
 
-I used Photoshop to create my logo and decided on a text and a small image on the left. 
+I used Photoshop to create my logo and decided on a text and a food image on the left. 
 
 ![Logo](/static/css/images/logo.png)
 
+**Wireframes**
+
+I used Balsamic wireframe to define the site's basic structure and visualize the project and plan.
+
+![Home](/static/)
+
+![About](/static/)
+
+![Add Recipe](/static/)
+
+![View Recipe](/static/)
+
+![Register](/static/)
+
+![Login](/static/)
+
+[Back to content](#contents)
 
 
