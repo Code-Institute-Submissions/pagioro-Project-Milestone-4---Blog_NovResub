@@ -216,6 +216,64 @@ The contact form has been added, but it still doesn't work. I will make it work 
 
 [Back to content](#contents)
 
+## **Bugs**
+
+* **Bug** - *id_recipe = models.AutoField(primary_key=True)*
+
+    Previously, the field type was an integer, and the user would have to know the last recorded recipe.
+
+    **Solution:** - I was to put the field type AutoField, so the database automatically increments the id recipe, never repeating.
+
+* **Bug** - *path('edit_recipe/<slug:slug>', views.RecipeEditView.as_view(), name='edit_recipe')*
+
+    Edit recipe URL was not showing.
+
+    **Solution:** - The solution was to put as_view in views.RecipeEditView.
+
+* **Bug** - *PostDetail(View) in views.py with wrong syntax.*
+
+    Previously, post and recipe.slug was used in views.py so that the recipe information was displayed "slug": post or "slug": recipe.slug
+
+        return render(
+                request,
+                'post_detail.html',
+                {
+                    "post": post,
+                    "slug": post.slug,
+                    "comments": comments,
+                    "commented": False,
+                    "liked": liked,
+                    "comment_form": CommentForm()
+                },
+            )
+
+    **Solution:** - I changed it to post.slug is fixing the issue
+
+* **Bug** - *class RecipeEditView(UpdateView)*
+
+    In the RecipeEditView(UpdateView) class: in views.py, the update was not working because the return render was being used.
+
+    **Solution:** - It was necessary to create the function below.
+
+        def get_context_data(self, *args, **kwargs):
+            context = super(RecipeEditView, self).get_context_data(*args, **kwargs)
+            post = self.get_object()
+            context['post'] = post
+            return context
+
+* **Bug** - *Summernote not responsive*
+
+    Summernote was not responsive on smaller screens, and after several failed attempts trying to change it with CSS, I came up with a solution.
+
+    **Solution:** - I found the solution on slack by adding the code below in settings.py
+
+        SUMMERNOTE_CONFIG = {
+        'width': '100%',
+        'height': '480',
+        }
+
+
+
 
 
 
