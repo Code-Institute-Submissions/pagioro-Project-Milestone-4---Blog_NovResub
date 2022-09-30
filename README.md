@@ -115,17 +115,17 @@ I used Photoshop to create my logo and decided on a text and a food image on the
 
 I used Balsamic wireframe to define the site's basic structure and visualize the project and plan.
 
-![Home](/static/)
+![Home](/static/css/images/Home.png)
 
-![About](/static/)
+![About](/static/css/images/About.png)
 
-![Add Recipe](/static/)
+![Add Recipe](/static/css/images/)
 
-![View Recipe](/static/)
+![Post Detail Login](/static/css/images/Post%20Detail%20Login.png)
 
-![Register](/static/)
+![Post Detail Logout](/static/css/images/Post%20Detail%20Logout.png)
 
-![Login](/static/)
+![Sign In](/static/css/images/Sign%20In.png)
 
 [Back to content](#contents)
 
