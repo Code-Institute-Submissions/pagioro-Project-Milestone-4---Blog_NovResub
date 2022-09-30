@@ -82,6 +82,28 @@ The blog is interactive; you can share and comment on recipes already posted.
 
 * View post list - As a Site User I can view a list of posts so that I can select one to read
 
+**Design Goals**
+
+* A site that works on all devices. 
+* Easy to understand and use.
+* Clean and sophisticated design.
+
+**Design Choices**
+
+* Font
+
+The font used was comforta due to its modern style and easy readability.
+
+![Fonts](/static/css/images/Comfortaa.png)
+
+* Color Scheme
+
+On the site, I chose to use softer colours so that the attention wouldn't diverted from the recipes that are the focus, also used a darker green in the main bars so that the person can quickly view the registration and social networks both at the top of the page and at the footer.
+
+- White: #F9F9F9 - Background
+- Dark green: #95b5ac - top bar with sign up / login and social footer bar
+- light gray - #ced4da - Subscribe and contact bar
+
 
 
 
