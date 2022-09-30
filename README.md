@@ -129,4 +129,6 @@ I used Balsamic wireframe to define the site's basic structure and visualize the
 
 [Back to content](#contents)
 
+## **Data Base Model**
 
+![Entity Relationship Diagram](/static/css/images/data-base-model.png)
