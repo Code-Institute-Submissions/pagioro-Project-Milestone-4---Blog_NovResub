@@ -132,3 +132,28 @@ I used Balsamic wireframe to define the site's basic structure and visualize the
 ## **Data Base Model**
 
 ![Entity Relationship Diagram](/static/css/images/data-base-model.png)
+
+* Site Map
+
+![Site Map](/static/)
+
+## **Features**
+
+### Design Features
+
+* Header
+The header consists of a sign-up and login bar in the upper left and social media in the upper right corner. The logo is also centred and stands out due to its size. The navigation menu is simple, easy to use, centralized, and can be seen on all pages.
+In responsive mode, the navigation turns into a hamburger button, and the site's logo goes to the top left corner.
+
+
+* Home Page
+
+
+
+* Footer
+
+
+
+
+### Existing Features
+
