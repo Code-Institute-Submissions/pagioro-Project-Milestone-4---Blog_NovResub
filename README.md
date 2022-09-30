@@ -1,5 +1,5 @@
 # **Lulu's Kitchen**
-<!-- ![Lulu's Kitchen](/static/ colocar a imagem do site resposnivo usando o https://ui.dev/amiresponsive -->
+![Lulu's Kitchen](/static/css/images/project4blog.png)
 # **Lulu's Kitchen**
 A website made for you, with the best typical recipes from Brazil.
 Our objective is to encourage and promote Brazilian gastronomy's
