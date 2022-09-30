@@ -60,27 +60,36 @@ The blog is interactive; you can share and comment on recipes already posted.
 
 **User Stories**
 
-* Site pagination - As a Site User I can view a paginated list of posts so that easily select a post to view
 
-* Approve comments - As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments
 
-* Create Drafts - As a Site Admin I can create draft posts so that I can finish writing the content later
+* Access blog with admin privilege: As a site administrator user I can access the blog's URL so that I can get access to the posts and admin profile.
 
-* Manage Posts - As a Site Admin I can create, read, update and delete posts so that I can manage my blog content
+* Access blog: As a site user I can access the blog's URL so that I can have access to the posts.
 
-* Like / Unlike - As a Site User I can like or unlike a post so that I can interact with the content
+* Manage data structure: As a site administrator user I can create, view, update and delete data so that it can be displayed on the blog (title, title summary, content, photo, author, comments, likes and post date).
 
-* Comment on a post - As a Site User I can leave comments on a post so that I can be involved in the conversation
+* Manage Drafts: As a site administrator user I can create, view, update and delete draft posts so that I can approve their content later.
 
-* Account Registration - As a Site User I can register an account so that I can comment and like
+* Approve posts: As a site administrator user I can approve post drafts so that the user can view the post 
 
-* View comments - As a Site User / Admin I can view comments on an individual post so that I can read the conversation
+* Manage posts: As a site administrator user I can create, view, update and delete approved posts so that I can manage blog content.
 
-* View likes - As a Site User / Admin I can view the number of likes on each post so that I can see which is the most popular or viral
+* View post list: As a site user I can view the list of posts so that I can select the chosen one.
 
-* Open a post - As a Site User I can click on a post so that I can read the full text
+* Open a post: As a site user I can select a post so that I can read the full content.
 
-* View post list - As a Site User I can view a list of posts so that I can select one to read
+* Create user account: As a site user I can create an account so that I can comment and like posts.
+
+* Comment on a post: As a site user I can write comments on a post so that I can join the conversation.
+
+* Approve comments: As a site administrator user I can approve or disapprove comments so that I can filter out objectionable or inappropriate comments to the subject.
+
+* View comments: As a site user I can view comments on a post so that I can read the conversation
+Like/Dislike 
+
+* posts: As a site user I can like or not like a post so that I can give an opinion.
+
+* View post likes: As a site administrator user I can view the number of likes on each post so that I can understand which is the most popular or viral.
 
 **Design Goals**
 
