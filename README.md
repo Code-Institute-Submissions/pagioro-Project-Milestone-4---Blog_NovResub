@@ -246,7 +246,33 @@ The contact form has been added, but it still doesn't work. I will make it work 
 * Result: The footer is visible on all pages of the site.
 * Verdict: The code works perfectly.
 
+### Recipe overview
 
+* Expected Result: A list of recipes should be displayed upon entering the site. The list should present a preview of each recipe with some basic information.
+* Test: I entered the site to check if the recipes were displayed.
+* Result: A list of recipes is displayed upon entering the site. Each recipe card previews an image, author, title, snippet, creation date, and a number of likes.
+* Verdict: The code works perfectly.
+
+### Pagination
+
+* Expected result: The site must have a maximum of 6 recipes displayed at once. When there are six recipes on the page, it should be paginated, and the user should be able to click to go to the next page.
+* Test: I checked that pagination was enabled if there were more than six recipes on the site by adding a larger number of recipes.
+* Result: The seventh recipe that was added to the site was displayed on a second page.
+* Verdict: The code works perfectly.
+
+### Recipe detail
+
+* Expected result: When a specific recipe is clicked, the recipe should open on a page another page with more detailed information about the recipe.
+* Test: I clicked on a recipe to see if it opened and revealed all the information on the other page.
+* Result: When a recipe is clicked, it opens and reveals information.
+* Verdict: The code now works perfectly.
+
+### Likes
+
+* Expected Result: When viewing a recipe, the total number of likes should be displayed, and if the user is logged in, the ability to like/unlike should be available.
+* Test: I opened a recipe to see if the likes were visible and ensured the icon was clickable.
+* Result: The number of likes is displayed, and if the user is logged in, the icon is clickable.
+* Verdict: The code works perfectly.
 
 
 
