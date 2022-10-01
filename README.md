@@ -274,6 +274,91 @@ The contact form has been added, but it still doesn't work. I will make it work 
 * Result: The number of likes is displayed, and if the user is logged in, the icon is clickable.
 * Verdict: The code works perfectly.
 
+### Views comments
+
+* Expected Result: When viewing a recipe in its entirety, all comments should be displayed, showing the oldest first.
+* Test: I opened a recipe to see if comments are available to all users and if the oldest is displayed first.
+* Result: Comments are displayed for all users, logged in or not. The oldest comment is displayed first.
+* Verdict: The code works perfectly.
+
+### Delete comment
+
+* Expected Result: A logged-in user should be able to delete their comments quickly.
+* Test: Log in to see if I can only delete my comments.
+* Result: When logged in, all comments are displayed, and the ones I created are presented with a "Delete comment" button below. When clicked, the comment disappears.
+* Verdict: The code works perfectly.
+
+### Create comments
+
+* Expected result: When viewing a recipe, a logged-in user should be presented with the option to leave a comment.
+* Test: If the user is not logged in, he will not be able to comment on the recipe.
+* Result: When viewing a recipe in its entirety as a logged in user, the option to leave a comment is presented. When a comment is entered, the user will wait for the site administrator to approve their comment.
+* Verdict: The code works perfectly.
+
+### Manage Recipe
+
+* Expected Result: When a logged-in user is viewing their recipes, an option to Edit or Delete the recipe should be presented. If the site user is not the recipe's author, this option should not exist.
+* Test: View a recipe I authored, view another user's recipe, and view a recipe as a non-logged-in user.
+* Result: When viewing my recipe, an option to Edit or Delete the recipe is presented clearly. When viewing a recipe that I am not a user of or am not logged in to, there is no option to manage the recipe.
+* Verdict: The code works perfectly.
+
+### Edit recipe
+
+* Expected Result: When creating your recipes, you should have the option to Edit. When the Edit button is clicked, an Edit Recipe view opens for editing.
+* Test: View my recipe and be able to edit it.
+* Result: The Edit Recipe view opens when the button is clicked, and all the features of the recipe can be edited.
+* Verdict: The code works perfectly.
+
+### Delete recipe
+
+* Expected Result: When viewing your recipes, you will have the option to delete them
+* Test: I can see my recipes, and the delete button
+* Result: The Delete Recipe page opens when the button is clicked, and the user is presented with the option to return to the feed or, if they are sure, confirm they want to delete their recipe.
+* Verdict: The code works perfectly.
+
+### Add recipe
+
+* Expected Result: A logged-in user should be able to add recipes to the site. All fields except the snippet must be completed.
+* Test: As logged in user adds a new recipe, trying to leave the fields blank and filling all.
+* Result: By leaving one or more mandatory fields blank, the user is encouraged to complete the form.
+* Verdict: The code works perfectly.
+
+### Placeholder image
+
+* Expected Result: If the user does not choose to upload an image for their recipe, it should display a placeholder image.
+* Test: Add recipe without image.
+* Result: The placeholder image will be displayed when adding a recipe but not uploading an image.
+* Verdict: The code works perfectly.
+
+### Register new account
+
+* Expected Result: As a user of the site, you must be able to create an account to interact with the site. The username must be unique, and entering an email address is optional.
+* Test: I created a new account with a unique username, a new account with an existing username, and a new account with and without an email address.
+* Result: If the new account has a unique username, it will create the account regardless of whether an email address is entered or not. When trying to create a new account with an existing username, the user is encouraged to choose a unique username as it already exists. When the account is registered, the user is logged in and is notified by an alert.
+* Verdict: The code works perfectly.
+
+### Log in
+
+* Expected Result: As a registered user of the site, you must be able to log into your account to interact.
+* Test: I verified the Login functionality as a registered user.
+* Result: Upon entering valid login credentials, the user is logged in and redirected to the home page, and an alert notifies the user that he is logged in.
+* Verdict: The code works perfectly.
+
+### Logout
+
+* Expected Result: As a registered and logged-in user, you should be able to log out of the site.
+* Test: I checked the Logout functionality as a logged-in user.
+* Result: When clicking Logout, the user is redirected to the Logout page and asked to confirm that he wants to log out.
+* Verdict: The code works perfectly.
+
+[Back to content](#contents)
+
+## Automated Testing
+
+### Code Validation
+
+
+
 
 
 
@@ -400,6 +485,8 @@ References used:
 * Thanks to the entire team of tutors who helped me on this journey, the people at slack who helped with some problems I had, and my mentor who gave me direction.
 
 [Back to content](#contents)
+
+
 
 
 
