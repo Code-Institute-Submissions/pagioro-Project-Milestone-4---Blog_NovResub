@@ -191,6 +191,10 @@ A welcome page has not been added, which will be made shortly.
 
 I would add a print button and by clicking open a pdf file with the recipe information to be printed.
 
+* **Comments counter**
+
+I will add a comment counter in the future.
+
 * **Search Recipes**
 
 I would add an exciting feature to search for recipes on the site.
@@ -211,6 +215,40 @@ The contact form has been added, but it still doesn't work. I will make it work 
 
 
 ## **Testing**
+
+## Manual Testing
+
+### Navigation Bar
+
+* Expected Result: The navigation bar should be visible on all site pages. The navigation bar should toggle if the page is rendered on smaller screens for a better user experience.
+* Test: I visited all pages on the site in all resolutions to check if the navigation bar was visible.
+* Result: The navigation bar is visible on all site pages in any resolution.
+* Verdict: The code works perfectly.
+
+### Logo
+
+* Expected Result: When clicking on the logo and changing the screen resolution, the user should be redirected to the homepage, and the logo should change size.
+* Test: I clicked on the logo on every page and reduced and increased the resolution.
+* Result: each time I clicked on the logo, I was redirected to the homepage and zoomed in and out in different resolutions.
+* Verdict: The code works perfectly.
+
+### Links
+
+* Expected Result: When clicking on the links, the user must be redirected to its respective page.
+* Test: I clicked on all links on all pages to verify their operation.
+* Result: I was redirected to the correct page every time I clicked on the links.
+* Verdict: The code works perfectly.
+
+### Footer
+
+* Expected Result: The footer must be visible on all site pages and always be placed at the bottom of the page.
+* Test: I visited every page on the site to check if the footer was visible.
+* Result: The footer is visible on all pages of the site.
+* Verdict: The code works perfectly.
+
+
+
+
 
 
 
