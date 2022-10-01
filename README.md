@@ -272,6 +272,69 @@ The contact form has been added, but it still doesn't work. I will make it work 
         'height': '480',
         }
 
+[Back to content](#contents)
+
+## **Technology Used**
+
+### Main Languages Used
+- [HTML5](https://en.wikipedia.org/wiki/HTML5 "Link to HTML Wiki")
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets "Link to CSS Wiki")
+
+### Additional Languages Used
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript "Link to JavaScript Wiki")
+     - Used to implement the Summernote feature that allowed the user to add styling to the recipe in the form.
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language) "Link to Python Wiki")
+     - Used to implement Django functionality, including building models, forms and views for the app.
+
+### Frameworks, Libraries & Programs Used
+- [Django](https://www.djangoproject.com/ "Link to Django Project website")
+    - Django was used to build the models, forms and views of the app, and was the backbone of this project.
+- [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/ "Link to Bootstrap page")
+     - Bootstrap was used to implement the responsiveness of the site.
+- [Cloudinary](https://cloudinary.com/ "Link to Cloudinary page")
+     - Cloudinary was used as free cloud storage for images uploaded to the site through the recipe forms.
+- [Summernote](https://summernote.org "Link to Summernote page")
+     - Summernote was used to allow users to add styling when adding a recipe to the site.
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/ "Link to the Crispy Forms documentation")
+    - Crispy Forms was used to style the add and edit recipe forms.
+- [Google Fonts](https://fonts.google.com/ "Link to Google Fonts")
+    - Google fonts were used to import the fonts "Playfair Display" and "Lato" into the style.css file. These fonts were used throughout the project.
+- [Font Awesome](https://fontawesome.com/ "Link to FontAwesome")
+     - Font Awesome was used on all pages throughout the website to import icons (e.g. social media icons) for UX purposes.
+- [Git](https://git-scm.com/ "Link to Git homepage")
+     - Git was used for version control by utilizing the GitPod terminal to commit to Git and push to GitHub.
+- [GitHub](https://github.com/ "Link to GitHub")
+     - GitHub was used to store the project.
+- [Am I Responsive?](http://ami.responsivedesign.is/# "Link to Am I Responsive Homepage")
+     - Am I Responsive was used to see responsive design throughout the process and to generate mockup image.
+- [Balsamiq Wireframes](https://balsamiq.com/learn/articles/what-are-wireframes/ "Link to Balsamiq Wireframes")
+     - Balsamiq was used to create the wireframes for the project.  
+
+[Back to content](#contents)
+
+## **Credits**
+
+### Media
+
+
+
+
+
+### Code
+
+References used:
+
+
+* [CSS](https://css-tricks.com/)
+* [Bootstrap](https://getbootstrap.com/)
+* [Django Docs](https://docs.djangoproject.com/en/4.0/)
+* [Stack Overflow](https://stackoverflow.com/)
+* [W3 Schools](https://www.w3schools.com/)
+
+
+
+
+
 
 
 
