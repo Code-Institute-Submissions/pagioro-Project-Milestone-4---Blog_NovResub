@@ -142,10 +142,6 @@ I used Balsamic wireframe to define the site's basic structure and visualize the
 
 ![Entity Relationship Diagram](/static/css/images/data-base-model.png)
 
-* Site Map
-
-![Site Map](/static/)
-
 ## **Features**
 
 ### Design Features
@@ -357,13 +353,22 @@ The contact form has been added, but it still doesn't work. I will make it work 
 
 ### Code Validation
 
-* HTML Validation - no errors just warning
+* HTML Validation - No errors just warning
 
-* CCS Validation - no errors
+* CCS Validation - I found an error in the CSS that I couldn't solve.
 
+![CSS Error](/static/css/images/css%20error.png)
 
+* Python Validation - Pep8 online is not working
 
+### Browser Validation
 
+The site has been tested using the following browsers:
+
+* Chrome
+* Firefox
+* Edge
+* Safari
 
 [Back to content](#contents)
 
