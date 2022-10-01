@@ -128,7 +128,7 @@ I used Balsamic wireframe to define the site's basic structure and visualize the
 
 ![About](/static/css/images/About.png)
 
-![Add Recipe](/static/css/images/)
+![Add Recipe](/static/css/images/add%20recipe.png)
 
 ![Post Detail Login](/static/css/images/Post%20Detail%20Login.png)
 
