@@ -316,9 +316,7 @@ The contact form has been added, but it still doesn't work. I will make it work 
 
 ### Media
 
-
-
-
+* Food images were used from the website [tudo gostoso website](https://www.tudogostoso.com.br). About image is from [Pexels Photo by Hannah Nelson](https://www.pexels.com/photo/close-up-photography-of-a-woman-near-wall-1065084/).
 
 ### Code
 
