@@ -357,7 +357,9 @@ The contact form has been added, but it still doesn't work. I will make it work 
 
 ### Code Validation
 
+* HTML Validation - no errors just warning
 
+* CCS Validation - no errors
 
 
 

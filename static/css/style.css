@@ -3,7 +3,7 @@
 body {  
   background-color: #F9F9F9;
   width: 100%;
-  font-family: Comfortaa, Helvetica, sans-serif;
+  font-family:"Comfortaa", Times, serif;
 }
 
 #main-section {
@@ -176,7 +176,7 @@ i {
   margin-top: 0.938rem;
 }
 
-..add-recipe-table > label {
+.add-recipe-table > label {
   font-size: small;
 }
 
