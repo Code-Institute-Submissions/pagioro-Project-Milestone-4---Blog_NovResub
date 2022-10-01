@@ -331,6 +331,15 @@ References used:
 * [Stack Overflow](https://stackoverflow.com/)
 * [W3 Schools](https://www.w3schools.com/)
 
+### Acknowledgements
+
+* I want to thank my wife and friends for inspiring me in my project.
+
+* Thanks to the entire team of tutors who helped me on this journey, the people at slack who helped with some problems I had, and my mentor who gave me direction.
+
+[Back to content](#contents)
+
+
 
 
 
