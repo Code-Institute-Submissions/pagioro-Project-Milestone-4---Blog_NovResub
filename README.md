@@ -7,6 +7,9 @@ richness, complexity and cultural diversity.
 
 [View the live project here](https://project4blog.herokuapp.com/ "Link to deployed site - Lulu's Kitchen")
 
+admin
+123321ep
+
 ## Contents
 * **Introduction**
     * Planning Stage
